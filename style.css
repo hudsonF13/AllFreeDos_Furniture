@@ -161,10 +161,14 @@ header>button:active {
     height: inherit;
 }
 
-.bonsaiFurnitureImg>img {
+#secondBonsaiFurniture, #firstBonsaiFurniture {
     border-right: 2px solid black;
     width: fit-content;
     height: inherit;
+}
+
+#secondBonsaiFurniture {
+    display: none;
 }
 
 .mainDivChangeSlidButtonsMobile {
@@ -361,7 +365,12 @@ header>button:active {
         height: 100%;
     }
     
-    .bonsaiFurnitureImg>img {
+    #firstBonsaiFurniture {
+        display: none;
+    }
+
+    #secondBonsaiFurniture {
+        display: flex;
         border-right: none;
         width: 100%;
     }
