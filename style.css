@@ -1,0 +1,411 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    list-style: none;
+}
+
+main, body {
+    margin: 0;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+    padding: 2rem 0 2rem 0;
+}
+
+header>button {
+    display: none;
+    font-size: 2rem;
+    background-color: transparent;
+    border: none;
+    padding: 0.1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+}
+
+header>button:hover {
+    color: rgb(97, 97, 97);
+    transition: 0.5s all;
+}
+
+header>button:active {
+    color: blue;
+    transition: 0.1s all;
+}
+
+#logo {
+    margin: 0;
+}
+
+#logo>a {
+    color: black;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.listLinksHeader {
+    display: flex;
+    gap: 7%;
+    margin: 0 0 0 2rem;
+    padding: 0;
+    width: max-content;
+}
+
+.listLinksHeader>li>a {
+    color: black;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.3rem;
+    border-bottom: 1px solid transparent;
+}
+
+.listLinksHeader>li>a:hover {
+    border-bottom: 1px solid black;
+    transition: 0.5s all;
+}
+
+.listLinksHeader>li>a:active {
+    color: rgb(128, 128, 128);
+    border-bottom: 1px solid rgb(128, 128, 128);
+    transition: 0.01s all;
+}
+
+#listLinksHeaderMobile {
+    display: none;
+}
+
+.listLinksHeaderMobile {
+    position: fixed;
+    top: 0;
+    right: 0;
+    animation: listLinksFromRight 1s linear;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    background-color: rgb(163, 163, 163);
+    border-left: 2px solid rgb(97, 97, 97);
+    height: 100%;
+}
+
+@keyframes listLinksFromRight {
+    from {
+        margin-right: -100%;
+    }
+    to {
+        margin-right: 0;
+    }
+}
+
+.listLinksHeaderMobile>ul {
+    text-align: right;
+    padding: 2rem 2rem 2rem 4.8rem;
+    margin: 0;
+    width: fit-content;
+}
+
+.listLinksHeaderMobile>ul>li {
+    margin-bottom: 1.5rem;
+}
+
+.listLinksHeaderMobile>ul>li>a {
+    color: black;
+    font-size: 1.2rem;
+    font-family: 'Josefin Sans', sans-serif;
+    border-bottom: 1px solid transparent;
+}
+
+.listLinksHeaderMobile>ul>li>a:hover {
+    border-bottom: 1px solid black;
+    transition: 0.5s all;
+}
+
+.listLinksHeaderMobile>ul>li>a:active {
+    color: blue;
+    border-bottom: 1px solid blue;
+    transition: 0.1s all;
+}
+
+#exitDiv {
+    font-size: 2rem;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    margin: 0.5rem;
+    padding: 0.1rem;
+    cursor: pointer;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+#exitDiv:hover {
+    background-color: rgb(97, 97, 97);
+    transition: 0.5s all;
+}
+
+#exitDiv:active {
+    color: blue;
+    background-color: transparent;
+    transition: 0.01s all;
+}
+
+.topSection {
+    display: flex;
+    height: 30rem;
+}
+
+.bonsaiFurnitureImg {
+    height: inherit;
+}
+
+.bonsaiFurnitureImg>img {
+    border-right: 2px solid black;
+    width: fit-content;
+    height: inherit;
+}
+
+.mainDivChangeSlidButtonsMobile {
+    display: none;
+    justify-content: flex-end;
+}
+
+.changeSlidButtonsMobile {
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    padding: 0;
+    width: 6rem;
+    height: 2rem;
+}
+
+.changeSlidButtonsMobile>button {
+    font-size: 1rem;
+    color: white;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+}
+
+.paragraph-slides {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#innovativeParagraph, #aroundWorldParagraph, #bestMaterialParagraph {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    padding: 4rem 7% 0.5rem 7%;
+    width: 100%; 
+}
+
+@keyframes paragraphSlidesFromRight {
+    from {
+        margin-left: 100%;
+        opacity: 0;
+    }
+    to {
+        margin-left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes paragraphSlidesFromLeft {
+    0% {
+        margin-left: -50%;
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.001;
+    }
+
+    100% {
+        margin-left: 0%;
+        opacity: 1;
+    }
+}
+
+#innovativeParagraph>h2, #aroundWorldParagraph>h2, #bestMaterialParagraph>h2 {
+    font-family: 'REM', sans-serif;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+#innovativeParagraph>p, #aroundWorldParagraph>p, #bestMaterialParagraph>p {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.2rem;
+}
+
+#toShop {
+    color: black;
+    font-size: 1.2rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    letter-spacing: 4px;
+    padding: 1rem 1rem 1rem 0;
+    width: fit-content;
+}
+
+#toShop:hover {
+    background-color: rgb(212, 212, 212);
+    transition: 0.2s all;
+}
+
+#toShop:active {
+    color: blue;
+    background-color: rgb(212, 212, 212);
+    transition: 0.01s all;
+}
+
+.mainDivChangeSlidButtons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.changeSlidButtons {
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    padding: 0;
+    width: 8.2rem;
+    height: 3.3rem;
+}
+
+.changeSlidButtons>button {
+    font-size: 1.3rem;
+    color: white;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+}
+
+.changeSlidButtons>button>i:hover {
+    color: gray;
+    transition: 0.2s all;
+}
+
+.changeSlidButtons>button>i:active {
+    color: initial;
+    transition: 0.01s all;
+}
+
+.bottomSection {
+    display: flex;
+    border-top: 2px solid black;
+}
+
+.ourFurniture {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2.5rem;
+}
+
+.ourFurniture>h3 {
+    font-family: 'REM', sans-serif;
+    font-weight: bold;
+    letter-spacing: 8px;
+    margin: 0;
+}
+
+.ourFurniture>p {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+.blackFurniture, .whiteFurniture {
+    width: 100%;
+}
+
+.whiteFurniture>img {
+    border-left: 2px solid black;
+}
+
+.blackFurniture>img, .whiteFurniture>img {
+    width: 22rem;
+}
+
+@media screen and (max-width: 1100px) {
+    header {
+        justify-content: space-between;
+        margin-left: 1.5rem;
+        padding: 1rem 0;
+        width: 55%;
+    }
+
+    header>button {
+        display: flex;
+    }
+
+    .listLinksHeader {
+        display: none;
+    }
+
+    .topSection {
+        flex-direction: column;
+        margin-bottom: 2rem;
+        height: fit-content;
+    }
+
+    .bonsaiFurnitureImg {
+        height: 100%;
+    }
+    
+    .bonsaiFurnitureImg>img {
+        border-right: none;
+        width: 100%;
+    }
+
+    #innovativeParagraph, #aroundWorldParagraph, #bestMaterialParagraph {
+        margin-top: 1rem;
+        padding: 2.5rem 3.5rem;
+    }
+
+    #innovativeParagraph>p, #aroundWorldParagraph>p, #bestMaterialParagraph>p {
+        font-size: 1.3rem;
+    }
+
+    .mainDivChangeSlidButtonsMobile {
+        display: flex;
+    }
+
+    .mainDivChangeSlidButtons {
+        display: none;
+    }
+
+    .bottomSection {
+        flex-direction: column;
+        align-items: center;
+        border-top: none;
+    }
+
+    .ourFurniture {
+        padding: 2.5rem 3.5rem;
+    }
+
+    .ourFurniture>h3 {
+        font-size: 1.3rem;
+    }
+    
+    .ourFurniture>p {
+        font-size: 1.3rem;
+    }
+    
+    .whiteFurniture>img {
+        border-left: none;
+    }
+        
+    .blackFurniture>img, .whiteFurniture>img {
+        width: 100%;
+    }
+}
